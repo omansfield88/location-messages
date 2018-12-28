@@ -6,11 +6,9 @@ class App extends Component {
 
   state = {
     message: {
-      text: 'This is the messags update',
+      text: 'This is the messags update 4211',
       display: false
-    },
-    latitude: 53.391501,
-    longitude: -2.9520177
+    }
 
   }
 
@@ -44,7 +42,7 @@ class App extends Component {
 
   render() {
 
-
+    console.log(this.state.latitude)
 
     let message;
     // if (this.state.display) {
