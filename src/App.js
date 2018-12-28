@@ -6,7 +6,7 @@ class App extends Component {
 
   state = {
     message: {
-      text: 'This is the messags',
+      text: 'This is the messags update',
       display: false
     },
     latitude: 53.391501,
