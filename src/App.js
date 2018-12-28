@@ -51,7 +51,7 @@ class App extends Component {
     //   message = <Message />
     // }
 
-    if (this.state.latitude > 53.3915) {
+    if (this.state.latitude > 53.4210) {
       message = <Message text={this.state.message.text}/>
     }
 
