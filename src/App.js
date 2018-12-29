@@ -8,15 +8,16 @@ class App extends Component {
     message: {
       text: 'This is the messags update 4211',
       display: false
-    }
+    },
+    latitude: 53.4210999
 
   }
 
-  // handleButtonPress = () => {
-  //   this.setState({
-  //     display: true
-  //   })
-  // }
+  handleButtonPress = () => {
+    this.setState({
+      latitude: 53.4211999
+    })
+  }
 
   componentDidMount() {
 
@@ -33,7 +34,6 @@ class App extends Component {
        { enableHighAccuracy: true, timeout: 20000, maximumAge: 10000 },
      );
 
-
    }
 
 
@@ -49,7 +49,7 @@ class App extends Component {
     //   message = <Message />
     // }
 
-    if (this.state.latitude > 53.4210) {
+    if (this.state.latitude < 53.4211999) {
       message = <Message text={this.state.message.text}/>
     }
 
