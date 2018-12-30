@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Message from './components/Message'
 
 class App extends Component {
@@ -10,7 +9,6 @@ class App extends Component {
       display: false
     },
     latitude: 53.4210999
-
   }
 
   handleButtonPress = () => {
@@ -30,8 +28,8 @@ class App extends Component {
            error: null,
          });
        },
-       (error) => {console.log(error)},
-       { enableHighAccuracy: true, timeout: 20000, maximumAge: 10000 },
+       (error) => {console.log('error')},
+       { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 },
      );
 
    }
@@ -49,12 +47,9 @@ class App extends Component {
     //   message = <Message />
     // }
 
-    if (this.state.latitude < 53.4211999) {
+    if (this.state.latitude < 53.3915) {
       message = <Message text={this.state.message.text}/>
     }
-
-
-
 
     // console.log((""+this.state.location.lat).split('').map(Number))
 
